@@ -1,0 +1,13 @@
+/* vim: ft=css:
+ */
+
+configuration {
+	lines: 16;
+	sort: true;
+	sorting-method: "normal";
+	show-icons: true;
+	kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";
+	kb-mode-next: "Tab";
+	kb-row-tab: "";
+	kb-row-select: "Control+space";
+}

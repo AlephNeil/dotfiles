@@ -1,0 +1,6 @@
+// These settings override both User and Default settings for the Markdown syntax
+{
+	"wrap_width": 80,	
+	"highlight_line": false,
+	"rulers": [80],
+}
