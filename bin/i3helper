@@ -1,0 +1,30 @@
+#!/bin/bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+case $1 in
+	moveToParent)
+		i3-msg mark i3ha
+		i3-msg focus parent
+		i3-msg focus parent
+		i3-msg mark i3hb
+		i3-msg [con_mark="i3ha"] focus
+		i3-msg move window to mark i3hb
+		i3-msg unmark i3ha
+		i3-msg unmark i3hb
+		;;
+	rightShift)
+		python "$SCRIPT_DIR/i3jam.py" +
+		;;
+	leftShift)
+		python "$SCRIPT_DIR/i3jam.py" -
+		;;
+	rightMoveShift)
+		python "$SCRIPT_DIR/i3jam.py" +:
+		;;
+	leftMoveShift)
+		python "$SCRIPT_DIR/i3jam.py" -:
+		;;
+esac
+
+# vim: set ft=bash:
